@@ -1,4 +1,4 @@
-| n   | el  | second_max | find_el    | find_el_binary | create_table |
+| array size   | element  | second_max, t | find_el, t  | find_el_binary, t | create_table, t  |
 |----:|----:|-----------:|-----------:|---------------:|-------------:|
 |100  | 79  | 0.00000310 | 0.00000240  |   0.00000540  |   0.00031300
 |1000 | 731 | 0.00001880 | 0.00001870  |  0.00000920   |  0.02637630
