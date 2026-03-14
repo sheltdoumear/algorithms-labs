@@ -37,11 +37,14 @@ def find_el_binary(el_to_find, arr):
 
 
 def table_create(size):
-
+    table = []
     for i in range(1, size + 1):
+        row = []
         for j in range(1, size + 1):
-            print(i * j, end = " ")
-        print()
+            row.append(i * j)
+        table.append(row)
+
+    return table
 
 
 
@@ -68,15 +71,16 @@ def generate_array(n):
 
 
 if __name__ == "__main__":
-    print("n      second_max       find_el     find_el_binary")
+    print("n       el        second_max       find_el     find_el_binary     create_table")
     sizes = [100, 1000, 5000, 10000]
     for i in sizes:
         arr = generate_array(i)
-        el = random.randint(0, 10000)
+        el = random.randint(0, i)
         t1 = time_count_one_arg(second_max, arr)
         t2 = time_count_two_args(find_el, el, arr)
         t3 = time_count_two_args(find_el_binary, el, arr)
-        print(i, t1, t2, t3, sep="    ")
+        t4 = time_count_one_arg(table_create, el)
+        print(i, el, t1, t2, t3, t4, sep="     ")
 
 
 
